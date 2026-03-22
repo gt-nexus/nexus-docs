@@ -19,7 +19,7 @@ html_css_files = ['custom.css']
 html_theme_options = {
     'source_repository': '',
     'source_branch': 'main',
-    'source_directory': 'docs/',
+    'source_directory': '/',
     'navigation_with_keys': True,
 }
 
