@@ -11,13 +11,10 @@ extensions = [
     'sphinx.ext.intersphinx', # Links to PyTorch/NumPy docs
     'sphinx_copybutton',   # Adds "copy" to code blocks
     'sphinx_design',       # For cards/grids
-    'sphinxcontrib.bibtex',# For research citations
 ]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-bibtex_bibfiles = ["nexus-refs.bib"]
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'furo'
