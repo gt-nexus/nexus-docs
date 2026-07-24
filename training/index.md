@@ -1,7 +1,10 @@
 # Training and Workshops
 
-HPC training resources, tutorials, and upcoming workshops.
+Nexus training resources, tutorials, and upcoming workshops.
 
-```{note}
-This page is under construction. Content will be added soon.
-```
+---
+
+## Tutorials
+
+* PEARC 2026 Tutorial - [Scalable AI Inference Workflows on Nexus using Cybershuttle](https://claude.ai/code/artifact/d535dcb8-07cc-4a5a-bf72-799ea0bea27b)
+
