@@ -231,11 +231,11 @@ View it with: vizfold serve
 
 The fold itself takes about **78 seconds** on one A100. Attention maps are dumped by default; pass `--attn=false` to skip them.
 
-````{dropdown} What `vizfold fold` does under the hood
+``{note} What `vizfold fold` does under the hood
 
 `vizfold fold` runs the same OpenFold executor that the dashboard uses. It queues the selected example, performs the run in your existing GPU allocation, and registers the output artifacts so they are visible from the dashboard.
 
-````
+``
 
 Inspect the result:
 
@@ -346,53 +346,53 @@ rm ~/.local/bin/vizfold
 
 ## Reference: Troubleshooting
 
-````{dropdown} No hosts listed in CS Bridge
+``{note} No hosts listed in CS Bridge
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+``
 
-````{dropdown} Microsoft sign-in fails
+``{note} Microsoft sign-in fails
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+``
 
-````{dropdown} Job stuck in PENDING
+```{note} Job stuck in PENDING
 The interactive partition is full or you asked for too much. Try fewer CPUs or less memory, or run the following on the login node for an estimate:
 
 ```bash
 squeue -u $USER --start
 ```
-````
+```
 
-````{dropdown} "Slurm is not available"
+```{note} "Slurm is not available"
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} The Connect window disconnects
+```{note} The Connect window disconnects
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} "run vizfold install openfold first"
+```{note} "run vizfold install openfold first"
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} `vizfold list examples` is empty
+```{note} `vizfold list examples` is empty
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} "Invalid account or account/partition combination"
+```{note} "Invalid account or account/partition combination"
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} Port 3000 does not open
+```{note} Port 3000 does not open
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} A dashboard fold sticks on "submitted"
+```{note} A dashboard fold sticks on "submitted"
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
-````{dropdown} The install died when my laptop slept
+```{note} The install died when my laptop slept
 The PDF lists this troubleshooting item but does not include expanded text in the extracted content.
-````
+```
 
 ---
 
