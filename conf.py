@@ -51,7 +51,7 @@ html_theme_options = {
 }
 
 # Adding the GT Interlocking Logo 
-html_logo = "_static/georgia-tech-logo.jpg" 
+html_logo = "_static/horizontal-darkcolors.svg" 
 html_favicon = "_static/favicon.ico"
 
 myst_enable_extensions = [
