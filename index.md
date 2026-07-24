@@ -57,7 +57,7 @@ jobs/slurm-basics
 %jobs/gpu-jobs
 jobs/interactive
 jobs/checkpoint-restart
-interactive/vscode
+%interactive/vscode
 %interactive/jupyter
 training/index
 support/help

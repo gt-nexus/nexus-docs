@@ -1,6 +1,6 @@
 # Data Transfer
 
-Apache Airavata MFT for moving data to and from Nexus.
+Data transfer methods - Globus, Cybershuttle MFT, scp, sftp, etc.
 
 ```{note}
 This page is under construction. Content will be added soon.
