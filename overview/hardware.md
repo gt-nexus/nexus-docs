@@ -1,20 +1,31 @@
 # Hardware Details
 
-Nexus integrates NVIDIA DGX B200 systems and RTX PRO 6000 Blackwell Server Edition GPUs. The DGX B200 nodes provide a purpose-built AI supercomputing foundation with tightly coupled GPUs, high-bandwidth interconnects, and optimized software for large-scale model training and inference, while the RTX PRO 6000-based nodes offer flexible, high-memory GPU resources for a wide range of AI, simulation, and data-intensive workloads.
+Nexus combines scheduled AI and scientific computing resources at Georgia Tech with persistent-service resources at Georgia Tech and NCSA. The installed system includes NVIDIA DGX B200 nodes for tightly coupled AI workloads, NVIDIA RTX PRO 6000 Blackwell Server Edition nodes for flexible GPU computing, and dedicated RTX-based nodes for long-running services.
 
-## System Summary
 
-| Resource | Aggregate |
-|---|---|
-| GPUs | 464 |
-| CPU cores | 8,320 |
-| System memory | 116 TB |
-| Node-local NVMe storage | ~1.9 PB |
-| Shared all-flash storage | 10+ PB |
+## Workload Fit and Access
+
+| Resource | Best suited for | Access model | Installed scale | GPU memory per node | Location |
+|---|---|---|---:|---:|---|
+| DGX B200 | Large-model training, tightly coupled multi-GPU workloads, and communication-intensive simulations | Scheduled through Slurm | 16 nodes / 128 GPUs | 1.44 TB HBM | Georgia Tech |
+| Scheduled RTX PRO 6000 | General AI, inference, fine-tuning, simulation, data analysis, and single- or multi-GPU jobs | Scheduled through Slurm | 38 nodes / 304 GPUs | 768 GB GDDR7 | Georgia Tech |
+| Persistent-service RTX PRO 6000 | Model-serving endpoints, scientific gateways, and other long-running services | Managed, non-Slurm access | 6 nodes / 48 GPUs | 768 GB GDDR7 | Georgia Tech and NCSA |
+
+## Installed Node Inventory
+
+| Category | Location | Access | Nodes | GPUs | CPU cores | System memory |
+|---|---|---|---:|---:|---:|---:|
+| DGX B200 | Georgia Tech | Slurm | 16 | 128 | 1,792 | 32 TB |
+| Scheduled RTX PRO 6000 | Georgia Tech | Slurm | 38 | 304 | 4,864 | 70 TB |
+| Persistent-service RTX PRO 6000 | Georgia Tech and NCSA | Managed service | 6 | 48 | 768 | 10 TB |
+| Management and administrative | Georgia Tech | Platform operations | 12 | - | 1,152 | 6 TB |
+| **Total installed** |  |  | **72** | **480** | **8,576** | **118 TB** |
+
+The 480 installed GPUs consist of 432 GPUs in scheduled compute pools and 48 GPUs assigned to persistent-service infrastructure. The 12 management and administrative nodes support platform operations and are not a general-purpose compute pool.
 
 ## Flagship AI Nodes (DGX-Class Systems)
 
-Designed for large-scale AI/ML training, multi-GPU workloads, and high-performance scientific simulations. Nexus includes **16 DGX-class nodes**, delivering 128 GPUs, 1,792 CPU cores, 32 TB of system memory, and 547 TB of aggregate node-local storage.
+Designed for large-scale AI/ML training, multi-GPU workloads, and high-performance scientific simulations. Nexus includes **16 DGX-class nodes**, delivering 128 GPUs, 1,792 CPU cores, 32 TB of system memory, and 547.2 TB of aggregate node-local storage.
 
 Each node is equipped with:
 
@@ -27,30 +38,41 @@ Each node is equipped with:
 - 800 Gb/s NDR InfiniBand connectivity
 - NVIDIA BlueField-3 DPUs for accelerated networking
 
-## Flexible AI Compute Nodes (RTX-Based Systems)
+## Scheduled AI Compute Nodes (RTX-Based Systems)
 
-Designed to support a broad range of AI, simulation, and data-intensive workloads. Nexus includes **42 RTX-based GPU nodes**, delivering 336 GPUs, 5,376 CPU cores, 78 TB of system memory, and approximately 1.33 PB of aggregate node-local storage.
+Designed to support a broad range of scheduled AI, simulation, and data-intensive workloads. Nexus includes **38 scheduled RTX-based GPU nodes**, delivering 304 GPUs, 4,864 CPU cores, 70 TB of system memory, and approximately 1.20 PB of aggregate node-local storage.
 
 Each node is equipped with:
 
-- 8× NVIDIA RTX PRO 6000 GPUs (96 GB GDDR7 per GPU)
-- Dual Intel Xeon processors (128 total CPU cores)
-- 36 nodes with 2 TB system memory per node
+- 8× NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs (96 GB GDDR7 per GPU)
+- Dual Intel Xeon 6767P processors (128 total CPU cores)
+- 32 nodes with 2 TB system memory per node
 - 6 nodes with 1 TB system memory per node
+- 1× 960 GB NVMe boot drive
+- 8× 3.84 TB NVMe local data drives
 - 31.68 TB NVMe local storage per node
-- 400 Gb/s NVIDIA ConnectX-7 networking for high-performance communication
-- Integrated Ethernet connectivity for management and data services
+- 2× 400 Gb/s NVIDIA ConnectX-7 VPI adapters
+- Integrated dual-port 10 GbE connectivity for management and data services
 
-## High-Performance Networking and Fabric
+## Persistent AI Service Nodes
 
-Nexus integrates NVIDIA NDR InfiniBand fabrics operating at up to 800 Gb/s, enabling low-latency, high-throughput communication across compute and storage resources. The networking infrastructure includes:
+Nexus includes six RTX PRO 6000 nodes dedicated to persistent services: four at Georgia Tech and two at NCSA. Together, they provide 48 GPUs, 768 CPU cores, 10 TB of system memory, and 184.32 TB of NVMe data capacity.
 
-- Non-blocking compute fabric for DGX nodes using an 8-rail NDR InfiniBand topology
-- Dedicated storage fabric optimized for high-throughput data movement between compute and the VAST storage system
-- NVIDIA QM9700 switches (32-port, 800 Gb/s) deployed across compute and storage tiers
-- High-speed optical transceivers and copper/optical cabling supporting NDR connectivity
-- NVIDIA UFM (Unified Fabric Manager) appliances for centralized monitoring and management of north-south and east-west traffic
-- A separate 1/10 Gb Ethernet management network for in-band and out-of-band system control
+All six nodes include:
+
+- 8× NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs with 96 GB GDDR7 per GPU
+- 768 GB aggregate GPU memory
+- Dual 64-core Intel Xeon processors with 128 total CPU cores
+- 30.72 TB of node-local NVMe data capacity
+
+Deployment-specific differences are summarized below.
+
+| Deployment | Nodes | Platform | System memory per node | Boot storage | Data storage | High-speed networking |
+|---|---:|---|---:|---|---|---|
+| Georgia Tech persistent service | 4 | Dual Intel Xeon 6767P processors | 2 TB DDR5 | 1× 960 GB NVMe | 8× 3.84 TB NVMe | 2× ConnectX-7 VPI at up to 400 Gb/s |
+| NCSA persistent service | 2 | Dual Intel Xeon 6760P processors | 1 TB DDR5 | 2× 480 GB NVMe in RAID 1 | 4× 7.68 TB NVMe | 4× 100 GbE ports |
+
+Persistent services are not submitted as Slurm jobs. Placement at Georgia Tech or NCSA depends on the service's security, data, networking, and operational requirements.
 
 ## High-Performance Storage System
 
@@ -64,14 +86,22 @@ The storage infrastructure includes **8 VAST Ceres V2 storage appliances**, each
 - Aggregate raw NVMe capacity of ~10.8 PB
 - A dedicated high-speed backend network (200–400 Gb Ethernet) supported by NVIDIA SN4700 switches
 
-## Management and Interactive Nodes
+## Networking and Site Boundaries
 
-Supporting system services, user access, and workflow orchestration. Nexus includes **12 management and interactive nodes**, delivering 1,152 CPU cores, 6 TB of system memory, and approximately 46 TB of aggregate node-local storage.
+The Georgia Tech DGX pool uses an eight-rail, non-blocking NDR InfiniBand compute fabric. Georgia Tech RTX compute and persistent-service nodes use NVIDIA ConnectX-7 connectivity at up to 400 Gb/s. The two NCSA persistent-service nodes use 100 GbE networking.
 
-Each node is equipped with:
+Published interface rates describe installed link capabilities; they are not guaranteed application throughput. Workload performance depends on communication patterns, protocol, topology, storage access, and system load.
 
-- Dual Intel Xeon processors (96 total CPU cores)
-- 0.5 TB system memory per node
-- 3.84 TB NVMe local storage
-- 400 Gb/s ConnectX-7 networking for high-performance data movement
-- 10 Gb Ethernet connectivity for management and access services
+Georgia Tech and NCSA are distinct deployment sites. Users should confirm data location, storage mounts, identity integration, endpoint exposure, and federation status before planning workflows that span both sites.
+
+## Management and Administrative Nodes
+
+Twelve CPU-only nodes support platform administration, user access, workflow orchestration, and related system services. These nodes are not part of the general-purpose compute pool.
+
+Each node includes:
+
+- 2× Intel Xeon processors with 96 total CPU cores
+- 512 GB system memory
+- 2× 1.92 TB NVMe drives
+- 2× NVIDIA ConnectX-7 VPI adapters operating at up to 400 Gb/s
+- Dual-port 10 GbE connectivity
