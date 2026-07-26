@@ -119,7 +119,7 @@ Everything checks out.
 Config: /home/<you>/.config/vizfold/vizfold.json
   ESMFOLD_ENV_PREFIX = /projects/<you>/vizfold/envs/vizfold-esmfold
   OPENFOLD_ACCOUNT = <your-account>
-  OPENFOLD_AF2_ROOT = /media/volume/nexus-staging-slurm-data/database
+  OPENFOLD_AF2_ROOT = /media/volume/data/alphafold2/database
   ...
   database = /projects/<you>/vizfold/vizfold.db (present)
 ```
@@ -444,39 +444,3 @@ on one does not serve the other.
 - CS Bridge issues: <https://github.com/cyber-shuttle/CS-Bridge/issues>
 - VizFold: <https://github.com/AI2Science/vizfold-foundation>
 - Both are built by the [ARTISAN research group](https://gt-artisan.github.io/) at Georgia Tech.
-
----
----
-
-## Appendix — organizer pre-flight (remove before sharing)
-
-Commands re-checked 2026-07-26 against **v0.6.0**. Design spec:
-`superpowers/specs/2026-07-24-pearc26-workshop-gaps.md`.
-
-**Real folds completed on Delta A100 hardware** (v0.3.0 vocabulary, re-run under `vizfold run`):
-
-| Protein | How it was submitted | Time | Result |
-| --- | --- | --- | --- |
-| 1G1J_1 (43 res) | CLI from the login node | 71 s | 776 atoms, 96 attention traces |
-| 1UBQ_1 (76 res) | the dashboard Fold card | 102 s | 1231 atoms, 96 attention traces |
-| 1G1J_1 (43 res) | CLI **inside an allocation** (the CS Bridge path) | 29 s | 776 atoms |
-
-The login-node numbers include an `srun` queue wait; the in-allocation number does not. Attendees
-get the in-allocation path. No Nexus timings have been measured.
-
-### Still unverified
-
-1. **Simple Browser rendering.** 3Dmol.js needs WebGL inside VS Code's webview. The run page serves
-   the viewer and the PDB and port forwarding is sound, but nobody has looked at a rendered
-   structure through an actual CS Bridge window.
-2. **The whole walkthrough on Nexus.** Every Nexus value above comes from `sites/nexus-dev.{sh,json}`,
-   not from a run, and its compute nodes have been SSH-unreachable in the past. Walk it once before
-   the workshop runs.
-3. **The one-hour interactive walltime**, end to end with an inexperienced group. With the install
-   moved to a prerequisite the session only has to cover Node provisioning, `npm install` and two
-   folds, which is comfortable — but Node provisioning has not been timed on the demo Nexus.
-4. **How many attendees actually arrive with the prerequisites done.** The session now depends on
-   it: someone who shows up with nothing installed cannot catch up inside the hour, since the
-   OpenFold build alone is ~10 minutes plus a queue wait. Worth a reminder mail, and worth having a
-   fallback (a pre-built prefix they can point `OPENFOLD_PREFIX` at, or a spare account with the
-   install already done).
