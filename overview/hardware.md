@@ -3,7 +3,7 @@
 Nexus combines scheduled AI and scientific computing resources at Georgia Tech with persistent-service resources at Georgia Tech and NCSA. The installed system includes NVIDIA DGX B200 nodes for tightly coupled AI workloads, NVIDIA RTX PRO 6000 Blackwell Server Edition nodes for flexible GPU computing, and dedicated RTX-based nodes for long-running services.
 
 
-## Choose a Resource
+## Workload Fit and Access
 
 | Resource | Best suited for | Access model | Installed scale | GPU memory per node | Location |
 |---|---|---|---:|---:|---|
