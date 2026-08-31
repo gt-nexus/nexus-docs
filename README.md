@@ -2,7 +2,7 @@
 
 This repository contains the source for the Nexus user documentation site.
 
-Nexus is a unified platform for AI and scientific computing. The documentation is designed to help researchers move from getting access, to running jobs, to building advanced AI-driven scientific workflows.
+Nexus is Georgia Tech's unified platform for AI and scientific computing. The documentation is designed to help researchers move from getting access, to running jobs, to building advanced AI-driven scientific workflows.
 
 The site is built using Sphinx with MyST Markdown and is published via Read the Docs.
 
@@ -33,22 +33,3 @@ The documentation is organized to follow a natural user journey:
 - Training, tutorials, and support
 
 The goal is to make Nexus approachable for new users while still being useful for advanced workflows.
-
----
-
-# Nexus Documentation
-
-This repository contains the source for the Nexus user documentation site.
-
-Nexus is Georgia Tech’s unified platform for AI and scientific computing. The documentation is designed to help researchers move from getting access, to running jobs, to building advanced AI-driven scientific workflows.
-
-The site is built using Sphinx with MyST Markdown and is published via Read the Docs.
-
----
-
-## Documentation Site
-
-Public documentation (coming soon):
-- https://nexus-docs.readthedocs.io
-
----
