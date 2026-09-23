@@ -17,7 +17,8 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # -- Options for HTML output -------------------------------------------------
-html_theme = 'furo'
+#html_theme = 'furo'
+html_theme = 'sphinxawesome_theme'
 html_title = "GT Nexus Docs"
 
 html_static_path = ['_static']
@@ -48,6 +49,8 @@ html_theme_options = {
         "color-sidebar-background": "#002233", # "Atlanta Fog" (GT dark blue-black)
         "color-sidebar-link-text": "#FFFFFF",
     },
+    "logo_light": "_static/horizontal-lightmode.svg",
+    "logo_dark": "_static/horizontal-darkmode.svg"
 }
 
 # Adding the GT Interlocking Logo 
