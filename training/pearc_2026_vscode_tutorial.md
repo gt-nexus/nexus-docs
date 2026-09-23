@@ -433,7 +433,7 @@ paths to type.
 3. Watch its status move through `submitted` → `running` → `completed` on the run's own page.
 4. Open each structure the run produced — one viewer per protein, each with its own attention maps.
 
-Same executor, same work as step 8: the dashboard records the run and shells out to
+Same executor, same work as step 5: the dashboard records the run and shells out to
 `vizfold run <id>`.
 
 Worth looking at while they are open:

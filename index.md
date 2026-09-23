@@ -30,7 +30,7 @@ Delta and DeltaAI.
 ## System Status
 
 Keep an eye on status updates here:
- 
+
 - {doc}`status`
 
 ```{toctree}

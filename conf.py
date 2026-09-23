@@ -9,11 +9,8 @@ extensions = [
     'sphinx_design',
     'sphinx.ext.autodoc',  # API docs
     'sphinx.ext.intersphinx', # Links to PyTorch/NumPy docs
-    'sphinx_copybutton',   # Adds "copy" to code blocks
-    'sphinx_design',       # For cards/grids
 ]
 
-templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # -- Options for HTML output -------------------------------------------------
