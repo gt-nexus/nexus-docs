@@ -1,7 +1,6 @@
 sphinx>=7.2
 myst-parser>=3.0
-sphinxawesome-theme>=6.0.5
 sphinx-copybutton>=0.5
 sphinx-design>=0.5
 linkify-it-py>=2.0
-#furo>=2024.1.29
+furo>=2024.1.29
