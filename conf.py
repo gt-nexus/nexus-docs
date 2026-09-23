@@ -28,8 +28,8 @@ html_theme_options = {
     'source_branch': 'main',
     'source_directory': '/',
     'navigation_with_keys': True,
-    #"logo_light": "_static/horizontal-lightmode.svg",
-    #"logo_dark": "_static/horizontal-darkmode.svg"
+    "logo_light": "horizontal-lightmode.svg",
+    "logo_dark": "horizontal-darkmode.svg"
     "light_css_variables": {
         # Sidebar and Top Bar
         "color-brand-primary": "#003057",    # GT Navy for navigation elements
