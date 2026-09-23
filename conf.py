@@ -29,7 +29,7 @@ html_theme_options = {
     'source_directory': '/',
     'navigation_with_keys': True,
     "light_logo": "horizontal-lightmode.svg",
-    "dark_logo": "horizontal-darkmode.svg"
+    "dark_logo": "horizontal-darkmode.svg",
     "light_css_variables": {
         # Sidebar and Top Bar
         "color-brand-primary": "#003057",    # GT Navy for navigation elements
@@ -49,7 +49,7 @@ html_theme_options = {
         
         "color-sidebar-background": "#002233", # "Atlanta Fog" (GT dark blue-black)
         "color-sidebar-link-text": "#FFFFFF",
-    },
+    }
 }
 
 # Adding the GT Interlocking Logo 
