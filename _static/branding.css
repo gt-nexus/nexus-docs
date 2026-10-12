@@ -1,0 +1,36 @@
+/* _static/branding.css */
+
+/* ==========================================
+   LIGHT MODE CONFIGURATION
+   ========================================== */
+html[data-theme="light"] {
+    /* 1. Brand Links & Accent Navigation Elements */
+    --color-brand: #003057;          /* GT Navy for navigation */
+    --color-link: #857437;           /* Accessible Dark Gold for content links */
+    --color-link-hover: #003057;     /* Navy on link hover */
+
+    /* 2. Left Sidebar (Navigation) */
+    --color-bg-sidebar: #f9f6e5;     /* "Diploma" GT light ivory background */
+    --color-sidebar-link: #003057;   /* Sidebar link text color */
+    
+    /* 3. Note Admonitions */
+    /* Note: Awesome theme uses Tailwind-style semantic components. 
+       Overriding note title text color and structural background color: */
+    --color-note-text: #B3A369;       /* Tech Gold for text title */
+    --color-bg-note: rgba(179, 163, 105, 0.1); /* 10% Tech Gold opacity tint */
+    --color-note-border: #B3A369;     /* Match the note boundary border */
+}
+
+/* ==========================================
+   DARK MODE CONFIGURATION
+   ========================================== */
+html[data-theme="dark"] {
+    /* 1. Brand Links & Accent Navigation Elements */
+    --color-brand: #B3A369;          /* Tech Gold stands out better in dark mode */
+    --color-link: #BFB37C;           /* Lighter gold for high dark contrast links */
+    --color-link-hover: #FFFFFF;     /* Pure white on dark mode link hover */
+
+    /* 2. Left Sidebar (Navigation) */
+    --color-bg-sidebar: #002233;     /* "Atlanta Fog" GT dark blue-black */
+    --color-sidebar-link: #FFFFFF;   /* Clean white links against dark background */
+}
