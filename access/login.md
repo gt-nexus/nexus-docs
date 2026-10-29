@@ -11,7 +11,7 @@ If you don't have both of these yet, complete those steps first. Instructions fo
 
 ### Prerequisites
 
-To log in directly with SSH, you need:
+To log in directly with SSH, you will need:
 
 * An SSH client
 * A web browser, or a mobile device with a camera
@@ -20,7 +20,7 @@ To log in directly with SSH, you need:
 
 **1) Open a terminal application.**
 
-Both macOS and Linux machines include `ssh` in the built-in Terminal application. On Windows machines, you can use the built-in OpenSSH client in PowerShell or a third-party application such as PuTTY, MobaXterm, or Xshell.
+Both macOS and Linux machines include the OpenSSH utility `ssh` in the built-in Terminal application. On Windows machines, you can use the built-in OpenSSH client in PowerShell or a third-party application such as PuTTY, MobaXterm, or Xshell.
 
 **2) Enter your login information.**
 
@@ -41,7 +41,7 @@ If you're using a third-party application, enter the following settings and star
 
 You will then be prompted to complete an authentication step:
 
-\![Nexus MFA prompt](nexus-docs/access/nexus-mfa-image.png)
+![Nexus MFA prompt](nexus-mfa-image.png)
 
 Follow the instructions on screen, either by opening the URL provided or by scanning the QR code. **Be sure to sign in with the same credentials associated with your ACCESS account.** Login will fail if you use a different institutional credential.
 
