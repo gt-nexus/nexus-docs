@@ -53,6 +53,7 @@ data/storage
 data/data-transfer
 software/environment
 software/containers
+software/mpifileutils
 jobs/slurm-basics
 %jobs/gpu-jobs
 jobs/interactive
