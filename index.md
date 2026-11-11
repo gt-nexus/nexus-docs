@@ -54,6 +54,7 @@ data/data-transfer
 software/environment
 software/containers
 software/mpifileutils
+software/python/cuda-extensions
 jobs/slurm-basics
 %jobs/gpu-jobs
 jobs/interactive
