@@ -41,9 +41,11 @@ If you're using a third-party application, enter the following settings and star
 
 You will then be prompted to complete an authentication step:
 
-<p align="center">
-  <img src="./nexus-mfa-image.png" alt="Nexus MFA Prompt" width="700">
-</p>
+```{image} _static/nexus-mfa-image.png
+:width: 700px
+:align: center
+:alt: Nexus MFA Prompt
+```
 
 Follow the instructions on screen, either by opening the URL provided or by scanning the QR code. **Be sure to sign in with the same credentials associated with your ACCESS account.** Login will fail if you use a different institutional credential.
 
