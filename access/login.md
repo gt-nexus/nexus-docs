@@ -41,7 +41,7 @@ If you're using a third-party application, enter the following settings and star
 
 You will then be prompted to complete an authentication step:
 
-```{image} _static/nexus-mfa-image.png
+```{image} nexus-mfa-image.png
 :width: 700px
 :align: center
 :alt: Nexus MFA Prompt
